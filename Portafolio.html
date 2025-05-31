@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio profesional de Julián Sánchez - Técnico en Sistemas y Desarrollador Web.">
+  <title>Portafolio | Julián Sánchez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --color-primario: #1da1f2;
+      --color-secundario: #f9f9f9;
+      --color-acento: #e0e0e0;
+      --color-texto: #111111;
+      --color-facebook: #1877f2;
+      --color-linkedin: #0077b5;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header, nav, section, footer {
+      padding: 20px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--color-acento);
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--color-texto);
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: var(--color-primario);
+      color: #fff;
+      border-radius: 5px;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(120deg, var(--color-primario), var(--color-acento));
+      color: white;
+    }
+    .hero img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--color-primario);
+      padding-left: 10px;
+    }
+    .projects .card {
+      background: var(--color-acento);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .projects .card:hover {
+      transform: scale(1.02);
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      padding: 12px 20px;
+      background-color: var(--color-primario);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-buttons a {
+      color: white;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+    .social-buttons a.facebook {
+      background: var(--color-facebook);
+    }
+    .social-buttons a.linkedin {
+      background: var(--color-linkedin);
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    #toggleTema {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background-color: var(--color-acento);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .cv-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" data-aos="fade-down">
+    <img src="logo.png" alt="Julián Sánchez" />
+    <h1>Julián Sánchez</h1>
+    <p>Técnico en Sistemas | Desarrollador Web | Docente TIC</p>
+    <a href="curriculum.pdf" download class="cv-button"><i class="fas fa-download"></i> Descargar CV</a>
+  </header>
+
+  <section id="about" data-aos="fade-right">
+    <h2 class="section-title">Sobre mí</h2>
+    <p>Soy un profesional apasionado por la tecnología, la docencia y la creación de soluciones digitales. Me especializo en soporte técnico, desarrollo web y marketing digital, con habilidades destacadas en empatía, liderazgo y trabajo en equipo.</p>
+  </section>
+
+  <section id="skills" data-aos="fade-left">
+    <h2 class="section-title">Habilidades</h2>
+    <ul>
+      <li>🛠️ Soporte técnico</li>
+      <li>🌐 Redes e instalación</li>
+      <li>💡 Proactividad y liderazgo</li>
+      <li>🎨 Diseño y edición multimedia</li>
+      <li>📈 Marketing digital</li>
+      <li>💻 Herramientas web y Office</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects" data-aos="zoom-in-up">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="cards-container">
+      <div class="card" onclick="alert('Sitio web para un hotel local con sistema de reservas y formulario de contacto.')">
+        <h3>Hotel Web</h3>
+        <p>Diseño y desarrollo de sitio responsive</p>
+      </div>
+      <div class="card" onclick="alert('Sistema interno para gestión de tickets y soporte técnico.')">
+        <h3>Soporte Técnico</h3>
+        <p>Panel de control con base de datos</p>
+      </div>
+      <div class="card" onclick="alert('Plataforma educativa con acceso a materiales de TIC.')">
+        <h3>Educación TIC</h3>
+        <p>Capacitación online</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contacto</h2>
+    <form id="formulario" novalidate>
+      <input type="text" id="nombre" placeholder="Tu nombre" />
+      <input type="email" id="correo" placeholder="Tu correo electrónico" />
+      <textarea id="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <div class="social-buttons">
+      <a href="https://facebook.com/iloverock92" class="facebook" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://linkedin.com/in/julian-alberto-sanchez-bedoya-b73247139" class="linkedin" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </section>
+
+  <button id="toggleTema">🌗 Cambiar tema</button>
+
+  <footer>
+    © 2025 Julián Sánchez | Portafolio Profesional
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!nombre || !correo || !mensaje) {
+        alert("Por favor, completa todos los campos.");
+      } else if (!correoValido.test(correo)) {
+        alert("Por favor, ingresa un correo válido.");
+      } else {
+        alert("Gracias por tu mensaje, " + nombre + " 🎉");
+        this.reset();
+      }
+    });
+
+    const toggleBtn = document.getElementById("toggleTema");
+    let claro = true;
+    toggleBtn.addEventListener("click", () => {
+      const root = document.documentElement;
+      if (claro) {
+        root.style.setProperty("--color-secundario", "#111");
+        root.style.setProperty("--color-texto", "#f0f0f0");
+        root.style.setProperty("--color-acento", "#1f1f1f");
+        toggleBtn.textContent = "🌞 Cambiar a claro";
+        claro = false;
+      } else {
+        root.style.setProperty("--color-secundario", "#f9f9f9");
+        root.style.setProperty("--color-texto", "#111111");
+        root.style.setProperty("--color-acento", "#e0e0e0");
+        toggleBtn.textContent = "🌗 Cambiar tema";
+        claro = true;
+      }
+    });
+  </script>
+</body>
+</html>
