@@ -213,12 +213,15 @@
 
   <section id="contact" data-aos="fade-up">
     <h2 class="section-title">Contacto</h2>
-    <form id="formulario" novalidate>
-      <input type="text" id="nombre" placeholder="Tu nombre" />
-      <input type="email" id="correo" placeholder="Tu correo electrónico" />
-      <textarea id="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
+    
+<form action="https://formsubmit.co/formulariosportafolio@gmail.com" method="POST">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+  <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+  <input type="hidden" name="_captcha" value="false">
+  <button type="submit">Enviar mensaje</button>
+</form>
+
     <div class="social-buttons">
       <a href="https://facebook.com/iloverock92" class="facebook" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
@@ -236,44 +239,6 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-
-    document.getElementById("formulario").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById("nombre").value.trim();
-      const correo = document.getElementById("correo").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
-      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!nombre || !correo || !mensaje) {
-        alert("Por favor, completa todos los campos.");
-      } else if (!correoValido.test(correo)) {
-        alert("Por favor, ingresa un correo válido.");
-      } else {
-        alert("Gracias por tu mensaje, " + nombre + " 🎉");
-        this.reset();
-      }
-    });
-
-    const toggleBtn = document.getElementById("toggleTema");
-    let claro = true;
-    toggleBtn.addEventListener("click", () => {
-      const root = document.documentElement;
-      if (claro) {
-        root.style.setProperty("--color-secundario", "#111");
-        root.style.setProperty("--color-texto", "#f0f0f0");
-        root.style.setProperty("--color-acento", "#1f1f1f");
-        toggleBtn.textContent = "🌞 Cambiar a claro";
-        claro = false;
-      } else {
-        root.style.setProperty("--color-secundario", "#f9f9f9");
-        root.style.setProperty("--color-texto", "#111111");
-        root.style.setProperty("--color-acento", "#e0e0e0");
-        toggleBtn.textContent = "🌗 Cambiar tema";
-        claro = true;
-      }
-    });
-  </script>
+<script>AOS.init();</script>
 </body>
 </html>
